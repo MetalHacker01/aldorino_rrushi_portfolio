@@ -1,14 +1,14 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Terminal as TerminalIcon, Play } from "lucide-react";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback, useMemo } from "react";
 
 const Terminal = () => {
   const [currentCommand, setCurrentCommand] = useState(0);
   const [displayedText, setDisplayedText] = useState("");
   const [isTyping, setIsTyping] = useState(false);
 
-  const commands = [
+  const commands = useMemo(() => [
     {
       command: "%%[ VAR @firstName, @preferredProduct SET @firstName = AttributeValue(\"First_Name\") SET @preferredProduct = AttributeValue(\"Product_Interest\") ]%%",
       output: ["Processing AmpScript variables...", "Retrieved subscriber attributes", "✓ Variables set successfully"],
@@ -34,7 +34,7 @@ const Terminal = () => {
       output: ["Evaluating conditional logic...", "Applying personalization rules...", "Content variant selected", "✓ Dynamic content rendered"],
       description: "AmpScript - Conditional Content Logic"
     }
-  ];
+  ], []);
 
   const typeCommand = async (text: string) => {
     setIsTyping(true);
@@ -48,22 +48,23 @@ const Terminal = () => {
     setIsTyping(false);
   };
 
-  const runCommand = async (index: number) => {
+  const runCommand = useCallback(async (index: number) => {
+    setDisplayedText("");
+    setIsTyping(true);
     const command = commands[index];
     await typeCommand(command.command);
-    
     // Simulate processing time
     await new Promise(resolve => setTimeout(resolve, 1000));
-    
+    setIsTyping(false);
     // Auto-advance to next command after 3 seconds
     setTimeout(() => {
       setCurrentCommand((prev) => (prev + 1) % commands.length);
     }, 3000);
-  };
+  }, [commands]);
 
   useEffect(() => {
     runCommand(currentCommand);
-  }, [currentCommand]);
+  }, [currentCommand, runCommand]);
 
   return (
     <section id="terminal" className="py-20 bg-card">
@@ -144,7 +145,11 @@ const Terminal = () => {
                       ? 'border-primary bg-primary/5' 
                       : 'hover:border-primary/50'
                   }`}
-                  onClick={() => setCurrentCommand(index)}
+                  onClick={() => {
+                    setDisplayedText("");
+                    setIsTyping(false);
+                    setCurrentCommand(index);
+                  }}
                 >
                   <CardContent className="p-4">
                     <div className="flex items-start gap-3">

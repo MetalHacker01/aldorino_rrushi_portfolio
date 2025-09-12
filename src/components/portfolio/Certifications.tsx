@@ -1,43 +1,52 @@
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Award, CheckCircle, Star } from "lucide-react";
+import { Dialog, DialogTrigger, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import { Award, CheckCircle, Star, Image as ImageIcon } from "lucide-react";
+import { useState } from "react";
 
 const Certifications = () => {
   const salesforceCerts = [
     {
       name: "Salesforce Certified Agentforce Specialist",
       type: "Latest",
-      category: "AI & Automation"
+      category: "AI & Automation",
+  img: "/src/assets/certifications/Cert6240107_AgentforceSpecialist_20250606 (1)-1.jpg"
     },
     {
       name: "Salesforce Certified AI Associate", 
       type: "AI Certification",
-      category: "Artificial Intelligence"
+      category: "Artificial Intelligence",
+  img: "/src/assets/certifications/Cert5192565_AIAssociate_20241105 (1)-1.jpg"
     },
     {
       name: "Salesforce Certified Platform Foundations",
       type: "Platform",
-      category: "Core Platform"
+      category: "Core Platform",
+  img: "/src/assets/certifications/Cert3910756_PlatformFoundations_20231206-1.jpg"
     },
     {
       name: "Salesforce Certified Marketing Cloud Engagement Consultant",
       type: "Consultant",
-      category: "Marketing Cloud"
+      category: "Marketing Cloud",
+  img: "/src/assets/certifications/Cert3678343_MarketingCloudEngagementConsultant_20230920-1.jpg"
     },
     {
       name: "Salesforce Certified Marketing Cloud Engagement Administrator",
       type: "Administrator", 
-      category: "Marketing Cloud"
+      category: "Marketing Cloud",
+  img: "/src/assets/certifications/Cert2926493_MarketingCloudEngagementAdministrator_20230123-1.jpg"
     },
     {
       name: "Salesforce Certified Marketing Cloud Engagement Developer",
       type: "Developer",
-      category: "Marketing Cloud"
+      category: "Marketing Cloud",
+  img: "/src/assets/certifications/Cert2619730_MarketingCloudEngagementDeveloper_20221006-1.jpg"
     },
     {
       name: "Salesforce Certified Marketing Cloud Email Specialist",
       type: "Specialist",
-      category: "Marketing Cloud"  
+      category: "Marketing Cloud",
+  img: "/src/assets/certifications/Cert1117290_MarketingCloudEmailSpecialist_20220203-1.jpg"
     }
   ];
 
@@ -71,26 +80,47 @@ const Certifications = () => {
             
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {salesforceCerts.map((cert, index) => (
-                <Card 
-                  key={index}
-                  className="scroll-reveal bg-gradient-card border-border hover:border-primary/50 transition-smooth group hover:shadow-glow"
-                  style={{ animationDelay: `${index * 100}ms` }}
-                >
-                  <CardHeader className="pb-3">
-                    <div className="flex items-start justify-between gap-2">
-                      <CheckCircle className="w-6 h-6 text-success flex-shrink-0 mt-1" />
-                      <Badge variant="secondary" className="text-xs">
-                        {cert.type}
-                      </Badge>
+                <Dialog key={index}>
+                  <DialogTrigger asChild>
+                    <Card
+                      className="scroll-reveal bg-gradient-card border-border hover:border-primary/50 transition-smooth group hover:shadow-glow cursor-pointer"
+                      style={{ animationDelay: `${index * 100}ms` }}
+                    >
+                      <CardHeader className="pb-3">
+                        <div className="flex items-start justify-between gap-2">
+                          <CheckCircle className="w-6 h-6 text-success flex-shrink-0 mt-1" />
+                          <Badge variant="secondary" className="text-xs">
+                            {cert.type}
+                          </Badge>
+                        </div>
+                        <CardTitle className="text-lg leading-tight group-hover:text-primary transition-smooth">
+                          {cert.name}
+                        </CardTitle>
+                        <CardDescription className="text-accent font-medium">
+                          {cert.category}
+                        </CardDescription>
+                        <div className="flex items-center gap-2 mt-2 text-primary/80 text-xs">
+                          <ImageIcon className="w-4 h-4" />
+                          View Certificate
+                        </div>
+                      </CardHeader>
+                    </Card>
+                  </DialogTrigger>
+                  <DialogContent className="max-w-2xl p-0 bg-background rounded-lg border border-border shadow-xl">
+                    <div className="flex items-center justify-between px-6 pt-6 pb-2 border-b border-border">
+                      <DialogTitle className="text-primary text-lg m-0 p-0">{cert.name}</DialogTitle>
+                      {/* The close button is rendered by DialogContent, so we leave space here */}
                     </div>
-                    <CardTitle className="text-lg leading-tight group-hover:text-primary transition-smooth">
-                      {cert.name}
-                    </CardTitle>
-                    <CardDescription className="text-accent font-medium">
-                      {cert.category}
-                    </CardDescription>
-                  </CardHeader>
-                </Card>
+                    <div className="flex flex-col items-center justify-center p-4">
+                      <img
+                        src={cert.img}
+                        alt={cert.name}
+                        className="rounded-lg border border-border shadow-lg max-h-[70vh] w-auto object-contain"
+                        style={{ background: '#fff' }}
+                      />
+                    </div>
+                  </DialogContent>
+                </Dialog>
               ))}
             </div>
           </div>

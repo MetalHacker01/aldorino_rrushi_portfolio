@@ -21,16 +21,17 @@ const Contact = () => {
     {
       icon: Github,
       label: "GitHub",
-      value: "github.com/aldorino-rrushi",
-      href: "https://github.com/aldorino-rrushi",
+      value: "github.com/MetalHacker01",
+      href: "https://github.com/MetalHacker01",
       description: "Explore my code repositories"
     },
     {
       icon: MapPin,
-      label: "Location", 
+      label: "Location",
       value: "Tirana, Albania",
       href: "#",
-      description: "Available for remote work worldwide"
+      description: "Available for remote work worldwide",
+      noPointer: true
     }
   ];
 
@@ -53,10 +54,10 @@ const Contact = () => {
             {contactInfo.map((contact, index) => {
               const Icon = contact.icon;
               return (
-                <Card 
+                <Card
                   key={index}
-                  className="scroll-reveal bg-gradient-card border-border hover:border-primary/50 transition-smooth group cursor-pointer"
-                  style={{ animationDelay: `${index * 100}ms` }}
+                  className={`scroll-reveal bg-gradient-card border-border hover:border-primary/50 transition-smooth group ${contact.noPointer ? '' : 'cursor-pointer'}`}
+                  style={{ animationDelay: `${index * 100}ms`, cursor: contact.noPointer ? 'default' : 'pointer' }}
                   onClick={() => contact.href !== "#" && window.open(contact.href, "_blank")}
                 >
                   <CardHeader>
@@ -113,7 +114,7 @@ const Contact = () => {
                     variant="outline" 
                     size="lg"
                     onClick={() => window.open("http://www.linkedin.com/in/aldorino-rrushi", "_blank")}
-                    className="hover:border-primary hover:text-primary group"
+                    className="hover:border-primary hover:text-white group"
                   >
                     <Linkedin className="w-5 h-5 group-hover:scale-110 transition-transform" />
                     Connect on LinkedIn

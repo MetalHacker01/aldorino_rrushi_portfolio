@@ -1,73 +1,53 @@
-# Welcome to your Lovable project
 
-## Project info
+# Aldorino Rrushi Portfolio
 
-**URL**: https://lovable.dev/projects/323a04de-66b6-4530-bdf6-946744d683fc
+Welcome to the personal portfolio of Aldorino Rrushi, a Marketing Automation Solution Engineer and Web Developer based in Tirana, Albania.
 
-## How can I edit this code?
+## About This Project
 
-There are several ways of editing your application.
+This portfolio showcases my professional experience, certifications, and custom solutions in marketing automation, Salesforce Marketing Cloud, and web development. Built with modern technologies, it serves as a demonstration of my skills, projects, and expertise.
 
-**Use Lovable**
+## Features
+- **About**: Learn more about my background and professional journey.
+- **Experience**: Explore my work history and key roles.
+- **Certifications**: View my Salesforce and other industry certifications.
+- **Custom Solutions**: Discover unique automation and web solutions I've built.
+- **Terminal**: Interactive terminal-style section for fun and engagement.
+- **Contact**: Get in touch with me directly.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/323a04de-66b6-4530-bdf6-946744d683fc) and start prompting.
+## Tech Stack
+- **Vite**
+- **React** (TypeScript)
+- **Tailwind CSS**
+- **shadcn/ui**
 
-Changes made via Lovable will be committed automatically to this repo.
+## Getting Started
 
-**Use your preferred IDE**
+1. **Install dependencies:**
+	```sh
+	npm install
+	```
+2. **Start the development server:**
+	```sh
+	npm run dev
+	```
+3. **Build for production:**
+	```sh
+	npm run build
+	```
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## Folder Structure
+- `src/components/portfolio/` – Main portfolio sections and UI components
+- `src/assets/` – Images and static assets (favicon, logo, etc.)
+- `public/images/` – Publicly served images and robots.txt
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## Author
+**Aldorino Rrushi**  
+Marketing Automation Solution Engineer  
+Tirana, Albania
 
-Follow these steps:
+Connect with me on [LinkedIn](https://www.linkedin.com/in/aldorinorrushi/) or via the contact section in this portfolio.
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+---
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/323a04de-66b6-4530-bdf6-946744d683fc) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+© 2025 Aldorino Rrushi. All rights reserved.

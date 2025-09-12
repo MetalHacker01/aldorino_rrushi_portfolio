@@ -14,7 +14,7 @@ const Portfolio = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
       {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
+  <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border hidden md:block">
         <div className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             <Logo />
@@ -67,10 +67,11 @@ const Portfolio = () => {
         <div className="container mx-auto px-6">
           <div className="text-center text-muted-foreground">
             <p className="text-sm flex items-center justify-center gap-2">
+              © 2025
               <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
               </svg>
-              © 2025 Aldorino Rrushi. All rights reserved.
+              Aldorino Rrushi. All rights reserved.
             </p>
           </div>
         </div>

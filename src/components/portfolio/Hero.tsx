@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Github, Linkedin, Mail, Download } from "lucide-react";
 import { useEffect, useState } from "react";
-import profilePhoto from "/lovable-uploads/8faf4d8e-5746-42e3-bb3c-e8e1d2d5a8c5.png";
+import profilePhoto from "/images/profilePic.png";
 
 const Hero = () => {
   const [typedText, setTypedText] = useState("");
@@ -70,34 +70,34 @@ const Hero = () => {
             
             {/* CTA Buttons */}
             <div className="flex flex-wrap gap-4 justify-center lg:justify-start animate-slide-up">
-              <Button variant="hero" size="lg" className="group">
-                <Mail className="w-5 h-5 group-hover:rotate-12 transition-transform" />
-                Get In Touch
-              </Button>
-              
-              <Button variant="outline" size="lg" className="group hover:border-primary hover:text-primary">
-                <Download className="w-5 h-5 group-hover:translate-y-1 transition-transform" />
-                Download CV
-              </Button>
-              
+              <a href="mailto:aldorino.rrushi@gmail.com" target="_blank" rel="noopener noreferrer">
+                <Button variant="hero" size="lg" className="group">
+                  <Mail className="w-5 h-5 group-hover:rotate-12 transition-transform" />
+                  Let's discuss your needs
+                </Button>
+              </a>
+              <a href="/ARrushi_Curriculum.pdf" target="_blank" rel="noopener noreferrer">
+                <Button variant="outline" size="lg" className="group hover:border-primary hover:text-white">
+                  <Download className="w-5 h-5 group-hover:translate-y-1 transition-transform" />
+                  Download CV
+                </Button>
+              </a>
               <div className="flex gap-2">
-                <Button variant="ghost" size="icon" className="hover:text-primary hover:scale-110">
-                  <Linkedin className="w-5 h-5" />
-                </Button>
-                <Button variant="ghost" size="icon" className="hover:text-primary hover:scale-110">
-                  <Github className="w-5 h-5" />
-                </Button>
+                <a href="https://www.linkedin.com/in/aldorinorrushi/" target="_blank" rel="noopener noreferrer">
+                  <Button variant="ghost" size="icon" className="hover:text-primary hover:scale-110">
+                    <Linkedin className="w-5 h-5" />
+                  </Button>
+                </a>
+                <a href="https://github.com/MetalHacker01" target="_blank" rel="noopener noreferrer">
+                  <Button variant="ghost" size="icon" className="hover:text-primary hover:scale-110">
+                    <Github className="w-5 h-5" />
+                  </Button>
+                </a>
               </div>
             </div>
           </div>
         </div>
         
-        {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <div className="w-6 h-10 border-2 border-primary rounded-full flex justify-center">
-            <div className="w-1 h-3 bg-primary rounded-full mt-2 animate-pulse"></div>
-          </div>
-        </div>
       </div>
     </section>
   );
