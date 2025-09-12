@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Github, Linkedin, Mail, Download } from "lucide-react";
 import { useEffect, useState } from "react";
-import profilePhoto from "@/assets/profile-photo.jpg";
+import profilePhoto from "/lovable-uploads/8faf4d8e-5746-42e3-bb3c-e8e1d2d5a8c5.png";
 
 const Hero = () => {
   const [typedText, setTypedText] = useState("");

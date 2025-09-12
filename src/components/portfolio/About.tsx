@@ -1,17 +1,6 @@
 import { Badge } from "@/components/ui/badge";
 
 const About = () => {
-  const skills = [
-    "Salesforce Marketing Cloud",
-    "Oracle Eloqua", 
-    "AmpScript & SSJS",
-    "Marketing Automation",
-    "Campaign Development",
-    "HTML/CSS/JavaScript",
-    "Python & APIs",
-    "SQL & Data Segmentation"
-  ];
-
   return (
     <section id="about" className="py-20 bg-card">
       <div className="container mx-auto px-6">
@@ -64,19 +53,28 @@ const About = () => {
             {/* Skills */}
             <div className="scroll-reveal">
               <h3 className="text-2xl font-semibold mb-6 text-primary">Core Expertise</h3>
-              <div className="grid gap-4">
-                {skills.map((skill, index) => (
-                  <div
-                    key={skill}
-                    className="flex items-center space-x-4 p-4 bg-gradient-card rounded-lg border border-border hover:border-primary/50 transition-smooth group"
-                    style={{ animationDelay: `${index * 100}ms` }}
-                  >
-                    <div className="w-2 h-2 bg-primary rounded-full group-hover:shadow-glow transition-smooth"></div>
-                    <span className="text-lg font-medium group-hover:text-primary transition-smooth">
-                      {skill}
-                    </span>
-                  </div>
-                ))}
+              
+              <div className="grid md:grid-cols-2 gap-8 mb-12">
+                <div className="scroll-reveal" style={{ animationDelay: "200ms" }}>
+                  <h4 className="text-xl font-semibold mb-4 text-primary">Marketing Automation Platforms</h4>
+                  <ul className="space-y-2 text-muted-foreground">
+                    <li>• Salesforce Marketing Cloud</li>
+                    <li>• Oracle Eloqua</li>
+                    <li>• Adobe Marketo</li>
+                    <li>• Oracle Responsys</li>
+                    <li>• HCL Unica</li>
+                  </ul>
+                </div>
+                
+                <div className="scroll-reveal" style={{ animationDelay: "400ms" }}>
+                  <h4 className="text-xl font-semibold mb-4 text-primary">Development Languages</h4>
+                  <ul className="space-y-2 text-muted-foreground">
+                    <li>• HTML/CSS/JavaScript</li>
+                    <li>• SQL & Data Segmentation</li>
+                    <li>• AmpScript & SSJS</li>
+                    <li>• Python & APIs</li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>

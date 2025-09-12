@@ -10,29 +10,29 @@ const Terminal = () => {
 
   const commands = [
     {
-      command: "npm create react-app marketing-dashboard --template typescript",
-      output: ["Creating a new React app in /marketing-dashboard...", "Installing packages. This might take a few minutes.", "✓ Success! Created marketing-dashboard"],
-      description: "Setting up React TypeScript project"
+      command: "%%[ VAR @firstName, @preferredProduct SET @firstName = AttributeValue(\"First_Name\") SET @preferredProduct = AttributeValue(\"Product_Interest\") ]%%",
+      output: ["Processing AmpScript variables...", "Retrieved subscriber attributes", "✓ Variables set successfully"],
+      description: "AmpScript - Dynamic Content Personalization"
     },
     {
-      command: "sfdx force:data:soql:query -q \"SELECT Id, Email FROM Contact WHERE LastLoginDate = TODAY\"",
-      output: ["Running SOQL query...", "Found 1,247 active contacts", "Query completed successfully"],
-      description: "Salesforce CLI - Query active contacts"
+      command: "Platform.Load(\"core\", \"1\"); var de = DataExtension.Init(\"Customer_Preferences\"); var rows = de.Rows.Retrieve();",
+      output: ["Loading SSJS core library...", "Initializing Data Extension connection...", "Retrieved 2,847 customer records", "✓ SSJS execution completed"],
+      description: "SSJS - Data Extension Processing"
     },
     {
-      command: "git clone https://github.com/aldorino-rrushi/marketing-automation-suite.git",
-      output: ["Cloning into 'marketing-automation-suite'...", "Receiving objects: 100% (156/156)", "Resolving deltas: 100% (89/89), done."],
-      description: "Cloning Marketing Automation project"
+      command: "SELECT SubscriberKey, EmailAddress FROM Customers WHERE LastEngagementDate >= DATEADD(day, -30, GETDATE())",
+      output: ["Executing SQL query...", "Processing customer segmentation...", "Found 5,623 active subscribers", "✓ Query completed successfully"],
+      description: "SQL - Audience Segmentation Query"
     },
     {
-      command: "python api_integration.py --platform=eloqua --sync=contacts",
-      output: ["Connecting to Oracle Eloqua API...", "Syncing 3,421 contact records...", "✓ Sync completed: 3,421 contacts processed"],
-      description: "Python API integration script"
+      command: "POST /interaction/v1/events HTTP/1.1 Content-Type: application/json Authorization: Bearer {{access_token}}",
+      output: ["Connecting to SFMC REST API...", "Sending journey event data...", "Event processed successfully", "✓ API call completed"],
+      description: "REST API - Journey Event Injection"
     },
     {
-      command: "docker-compose up marketing-cloud-dev",
-      output: ["Creating network \"marketing_default\"", "Creating marketing-cloud-dev_db_1...", "marketing-cloud-dev_1 | Server ready on port 3000"],
-      description: "Docker development environment"
+      command: "%%=IIF(@preferredProduct == \"Premium\", \"Exclusive VIP Offer\", \"Special Promotion\")=%%",
+      output: ["Evaluating conditional logic...", "Applying personalization rules...", "Content variant selected", "✓ Dynamic content rendered"],
+      description: "AmpScript - Conditional Content Logic"
     }
   ];
 
