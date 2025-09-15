@@ -10,43 +10,43 @@ const Certifications = () => {
       name: "Salesforce Certified Agentforce Specialist",
       type: "Latest",
       category: "AI & Automation",
-  img: "/src/assets/certifications/Cert6240107_AgentforceSpecialist_20250606 (1)-1.jpg"
+      img: "/src/assets/certifications/SF_AgentForce_Specialit_Cert.jpg"
     },
     {
-      name: "Salesforce Certified AI Associate", 
+      name: "Salesforce Certified AI Associate",
       type: "AI Certification",
       category: "Artificial Intelligence",
-  img: "/src/assets/certifications/Cert5192565_AIAssociate_20241105 (1)-1.jpg"
+      img: "/src/assets/certifications/SF_AI_Associate_Cert.jpg"
     },
     {
       name: "Salesforce Certified Platform Foundations",
       type: "Platform",
       category: "Core Platform",
-  img: "/src/assets/certifications/Cert3910756_PlatformFoundations_20231206-1.jpg"
+      img: "/src/assets/certifications/SF_Associate_Cert.jpg"
     },
     {
       name: "Salesforce Certified Marketing Cloud Engagement Consultant",
       type: "Consultant",
       category: "Marketing Cloud",
-  img: "/src/assets/certifications/Cert3678343_MarketingCloudEngagementConsultant_20230920-1.jpg"
+      img: "/src/assets/certifications/SFMC_Consultant_Cert.jpg"
     },
     {
       name: "Salesforce Certified Marketing Cloud Engagement Administrator",
-      type: "Administrator", 
+      type: "Administrator",
       category: "Marketing Cloud",
-  img: "/src/assets/certifications/Cert2926493_MarketingCloudEngagementAdministrator_20230123-1.jpg"
+      img: "/src/assets/certifications/SFMC_Admin_Cert.jpg"
     },
     {
       name: "Salesforce Certified Marketing Cloud Engagement Developer",
       type: "Developer",
       category: "Marketing Cloud",
-  img: "/src/assets/certifications/Cert2619730_MarketingCloudEngagementDeveloper_20221006-1.jpg"
+      img: "/src/assets/certifications/SFMC_Developer_Cert.jpg"
     },
     {
       name: "Salesforce Certified Marketing Cloud Email Specialist",
       type: "Specialist",
       category: "Marketing Cloud",
-  img: "/src/assets/certifications/Cert1117290_MarketingCloudEmailSpecialist_20220203-1.jpg"
+      img: "/src/assets/certifications/SFMC_EmailSpecialist_Cert.jpg"
     }
   ];
 
@@ -72,9 +72,9 @@ const Certifications = () => {
           {/* Salesforce Certifications */}
           <div className="mb-12 scroll-reveal">
             <div className="flex items-center gap-3 mb-8">
-              <div className="w-12 h-12 bg-gradient-primary rounded-full flex items-center justify-center">
-                <Award className="w-6 h-6 text-primary-foreground" />
-              </div>
+              <span className="block w-14 h-10">
+                <img src="/images/Salesforce.com_logo.svg" alt="Salesforce Logo" className="w-14 h-10" />
+              </span>
               <h3 className="text-3xl font-bold text-primary">Salesforce Certifications</h3>
             </div>
             
