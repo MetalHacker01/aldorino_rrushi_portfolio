@@ -10,43 +10,43 @@ const Certifications = () => {
       name: "Salesforce Certified Agentforce Specialist",
       type: "Latest",
       category: "AI & Automation",
-      img: "/src/assets/certifications/SF_AgentForce_Specialit_Cert.jpg"
+  img: "/images/certifications/SF_AgentForce_Specialit_Cert.jpg"
     },
     {
       name: "Salesforce Certified AI Associate",
       type: "AI Certification",
       category: "Artificial Intelligence",
-      img: "/src/assets/certifications/SF_AI_Associate_Cert.jpg"
+  img: "/images/certifications/SF_AI_Associate_Cert.jpg"
     },
     {
       name: "Salesforce Certified Platform Foundations",
       type: "Platform",
       category: "Core Platform",
-      img: "/src/assets/certifications/SF_Associate_Cert.jpg"
+  img: "/images/certifications/SF_Associate_Cert.jpg"
     },
     {
       name: "Salesforce Certified Marketing Cloud Engagement Consultant",
       type: "Consultant",
       category: "Marketing Cloud",
-      img: "/src/assets/certifications/SFMC_Consultant_Cert.jpg"
+  img: "/images/certifications/SFMC_Consultant_Cert.jpg"
     },
     {
       name: "Salesforce Certified Marketing Cloud Engagement Administrator",
       type: "Administrator",
       category: "Marketing Cloud",
-      img: "/src/assets/certifications/SFMC_Admin_Cert.jpg"
+  img: "/images/certifications/SFMC_Admin_Cert.jpg"
     },
     {
       name: "Salesforce Certified Marketing Cloud Engagement Developer",
       type: "Developer",
       category: "Marketing Cloud",
-      img: "/src/assets/certifications/SFMC_Developer_Cert.jpg"
+  img: "/images/certifications/SFMC_Developer_Cert.jpg"
     },
     {
       name: "Salesforce Certified Marketing Cloud Email Specialist",
       type: "Specialist",
       category: "Marketing Cloud",
-      img: "/src/assets/certifications/SFMC_EmailSpecialist_Cert.jpg"
+  img: "/images/certifications/SFMC_EmailSpecialist_Cert.jpg"
     }
   ];
 
