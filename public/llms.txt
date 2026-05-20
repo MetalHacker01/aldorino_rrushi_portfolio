@@ -1,0 +1,13 @@
+# llms.txt — AI agent guidance for Aldorino Rrushi's portfolio
+User-agent: *
+Allow: /v2/index.md
+Allow: /v2/index.txt
+Allow: /v2/projects/sfmc-scout/index.md
+Allow: /v2/projects/sfmc-scout/index.txt
+Allow: /v2/projects/cloudpage-maestro/index.md
+Allow: /v2/projects/cloudpage-maestro/index.txt
+Allow: /v2/projects/maestro-builder/index.md
+Allow: /v2/projects/maestro-builder/index.txt
+
+# Preferred entry point for full content
+Canonical: /v2/index.md

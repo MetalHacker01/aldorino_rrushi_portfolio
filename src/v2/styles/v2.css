@@ -1,0 +1,106 @@
+/* v2 design tokens — scoped to .v2-root so they never leak into v1 */
+.v2-root {
+  /* Palette */
+  --v2-bg-app: #0E0E10;
+  --v2-bg-surface: #141416;
+  --v2-bg-elevated: #1A1A1D;
+  --v2-text: #E8E6E1;
+  --v2-text-muted: #8A8580;
+  --v2-text-dim: #4E4B47;
+  --v2-accent: #F2A65A;
+  --v2-accent-soft: rgba(242, 166, 90, 0.12);
+  --v2-signal-green: #7DDB6D;
+  --v2-signal-red: #E5484D;
+  --v2-line: #1F1F22;
+  --v2-line-strong: #2A2A2E;
+
+  /* Fonts */
+  --v2-font-mono: 'JetBrains Mono', 'IBM Plex Mono', 'Consolas', monospace;
+  --v2-font-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+  /* Motion */
+  --v2-ease: cubic-bezier(0.2, 0, 0, 1);
+  --v2-dur: 200ms;
+
+  background-color: var(--v2-bg-app);
+  color: var(--v2-text);
+  font-family: var(--v2-font-sans);
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+
+.v2-root .mono { font-family: var(--v2-font-mono); }
+.v2-root .muted { color: var(--v2-text-muted); }
+.v2-root .dim { color: var(--v2-text-dim); }
+.v2-root .accent { color: var(--v2-accent); }
+
+@keyframes v2-cursor-blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+.v2-root .cursor-block::after {
+  content: '█';
+  margin-left: 2px;
+  color: var(--v2-accent);
+  animation: v2-cursor-blink 1s steps(1) infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .v2-root * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@media (max-width: 1023px) {
+  .v2-root .hide-md { display: none !important; }
+}
+@media (max-width: 767px) {
+  .v2-root .hide-sm { display: none !important; }
+}
+
+.v2-root .show-sm-only { display: none; }
+@media (max-width: 767px) {
+  .v2-root .show-sm-only { display: flex !important; }
+}
+
+/* Amber-duotone avatar treatment — defaults to warm tint, reveals true colour on hover */
+.v2-root .v2-avatar {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  background: var(--v2-bg-elevated);
+}
+.v2-root .v2-avatar img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: filter var(--v2-dur) var(--v2-ease);
+  filter: grayscale(1) contrast(1.05) brightness(0.85);
+}
+.v2-root .v2-avatar::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--v2-accent);
+  mix-blend-mode: multiply;
+  opacity: 0.65;
+  pointer-events: none;
+  transition: opacity var(--v2-dur) var(--v2-ease);
+}
+.v2-root .v2-avatar:hover img,
+.v2-root .v2-avatar:focus-visible img {
+  filter: none;
+}
+.v2-root .v2-avatar:hover::after,
+.v2-root .v2-avatar:focus-visible::after {
+  opacity: 0;
+}
+@media (prefers-reduced-motion: reduce) {
+  .v2-root .v2-avatar img,
+  .v2-root .v2-avatar::after {
+    transition: none;
+  }
+}
