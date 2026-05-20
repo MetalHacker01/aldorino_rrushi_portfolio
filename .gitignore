@@ -12,6 +12,10 @@ dist
 dist-ssr
 *.local
 
+# Local-only archive of the previous portfolio version (v1 source).
+# Kept on disk for reference; not part of the active codebase or repo.
+archive/
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
