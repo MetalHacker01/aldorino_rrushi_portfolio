@@ -1,6 +1,6 @@
 import fs from "node:fs";
 import path from "node:path";
-import { siteMeta } from "../src/v2/content/siteMeta";
+import { siteMeta, SITE_ORIGIN } from "../src/v2/content/siteMeta";
 import { about } from "../src/v2/content/about";
 import { experience } from "../src/v2/content/experience";
 import { projects } from "../src/v2/content/projects";
@@ -128,6 +128,38 @@ const stripMarkdown = (md: string): string => {
   return lines.join("\n");
 };
 
+const buildSitemap = (): string => {
+  const lastmod = today();
+  const urls: { loc: string; priority: string; changefreq: string }[] = [
+    { loc: `${SITE_ORIGIN}/`, priority: "1.0", changefreq: "monthly" },
+    { loc: `${SITE_ORIGIN}/v2/index.md`, priority: "0.7", changefreq: "monthly" },
+    { loc: `${SITE_ORIGIN}/v2/index.txt`, priority: "0.5", changefreq: "monthly" },
+  ];
+  projects
+    .filter((p) => p.caseStudyHref)
+    .forEach((p) => {
+      urls.push({ loc: `${SITE_ORIGIN}/projects/${p.slug}`, priority: "0.9", changefreq: "monthly" });
+      urls.push({ loc: `${SITE_ORIGIN}/v2/projects/${p.slug}/index.md`, priority: "0.6", changefreq: "monthly" });
+    });
+
+  const body = urls
+    .map(
+      (u) => `  <url>
+    <loc>${u.loc}</loc>
+    <lastmod>${lastmod}</lastmod>
+    <changefreq>${u.changefreq}</changefreq>
+    <priority>${u.priority}</priority>
+  </url>`
+    )
+    .join("\n");
+
+  return `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${body}
+</urlset>
+`;
+};
+
 export const writeBuildArtifacts = (outDir: string) => {
   const md = buildMarkdown();
   const txt = stripMarkdown(md);
@@ -154,12 +186,16 @@ export const writeBuildArtifacts = (outDir: string) => {
       ...p.bullets.map((b) => `- ${b}`),
       "",
       `GitHub: ${p.githubUrl}`,
+      `Live: ${SITE_ORIGIN}/projects/${p.slug}`,
       "",
       `*Last generated: ${today()}*`,
     ].join("\n");
     fs.writeFileSync(path.join(dir, "index.md"), projectMd, "utf8");
     fs.writeFileSync(path.join(dir, "index.txt"), stripMarkdown(projectMd), "utf8");
   });
+
+  // sitemap.xml at the site root for Google Search Console
+  fs.writeFileSync(path.join(outDir, "sitemap.xml"), buildSitemap(), "utf8");
 };
 
 const isDirect = (() => {

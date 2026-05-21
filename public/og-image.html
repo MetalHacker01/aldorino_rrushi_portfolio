@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>og-image preview (1200x630)</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: #1a1a1a; font-family: 'JetBrains Mono', 'Consolas', monospace; }
+  body { display: flex; align-items: center; justify-content: center; min-height: 100vh; }
+  .card {
+    width: 1200px;
+    height: 630px;
+    background: #0E0E10;
+    color: #E8E6E1;
+    padding: 64px 72px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 60px rgba(0,0,0,0.6);
+  }
+  .dots {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 56px;
+  }
+  .dot { width: 16px; height: 16px; border-radius: 50%; }
+  .dot.r { background: #E5484D; }
+  .dot.y { background: #F5A623; }
+  .dot.g { background: #7DDB6D; }
+  .prompt {
+    color: #8A8580;
+    font-size: 20px;
+    letter-spacing: 0.04em;
+    margin-bottom: 24px;
+  }
+  .prompt .sigil { color: #7DDB6D; margin-right: 8px; }
+  .name {
+    font-family: 'Inter', system-ui, sans-serif;
+    font-size: 88px;
+    font-weight: 800;
+    line-height: 0.95;
+    letter-spacing: -0.025em;
+    color: #E8E6E1;
+    margin-bottom: 18px;
+  }
+  .tagline {
+    font-family: 'Inter', system-ui, sans-serif;
+    font-size: 38px;
+    font-weight: 400;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+    color: #F2A65A;
+    margin-bottom: 48px;
+    max-width: 950px;
+  }
+  .role {
+    color: #8A8580;
+    font-size: 24px;
+    letter-spacing: 0.06em;
+    margin-bottom: 8px;
+  }
+  .role .sep { color: #4E4B47; margin: 0 12px; }
+  .footer {
+    position: absolute;
+    bottom: 48px;
+    left: 72px;
+    right: 72px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #8A8580;
+    font-size: 20px;
+    letter-spacing: 0.04em;
+    border-top: 1px solid #2A2A2E;
+    padding-top: 20px;
+  }
+  .footer .url { color: #F2A65A; }
+  .footer .creds { color: #8A8580; }
+  .creds .star { color: #F2A65A; }
+
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="card" id="card">
+  <div class="dots">
+    <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+  </div>
+  <div class="prompt"><span class="sigil">$</span>whoami</div>
+  <div class="name">ALDORINO RRUSHI</div>
+  <div class="tagline">I make marketing platforms do what they couldn't.</div>
+  <div class="role">solution engineer<span class="sep">·</span>martech<span class="sep">·</span>software<span class="sep">·</span>ai</div>
+  <div class="footer">
+    <span class="url">aldorino.is-a.dev</span>
+    <span class="creds"><span class="star">★</span> 7× salesforce-certified · tirana, albania</span>
+  </div>
+</div>
+<script>
+  // Instructions printed to console for whoever opens this file:
+  console.log(
+    "%cOG-image template",
+    "color:#F2A65A;font-weight:700;font-size:14px;"
+  );
+  console.log("Take a screenshot of the card above at exactly 1200×630 px and save as public/og-image.png");
+  console.log("Easiest: Chrome DevTools → Cmd/Ctrl+Shift+P → 'Capture node screenshot' on the .card element.");
+</script>
+</body>
+</html>

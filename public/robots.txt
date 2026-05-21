@@ -1,3 +1,7 @@
 User-agent: *
 Allow: /
-Sitemap: /llms.txt
+
+# AI agent guidance (see llms.txt for canonical machine-readable URLs)
+Allow: /llms.txt
+
+Sitemap: https://aldorino.is-a.dev/sitemap.xml

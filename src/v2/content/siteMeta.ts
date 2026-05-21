@@ -1,5 +1,7 @@
 import type { SiteMeta } from "./types";
 
+export const SITE_ORIGIN = "https://aldorino.is-a.dev";
+
 export const siteMeta: SiteMeta = {
   name: "Aldorino Rrushi",
   role: "Solution Engineer — Marketing Automation · Software · AI",
@@ -12,3 +14,6 @@ export const siteMeta: SiteMeta = {
   trailheadUrl: "https://www.salesforce.com/trailblazer/arrushi",
   version: "2.0.0",
 };
+
+export const url = (path: string = "/"): string =>
+  `${SITE_ORIGIN}${path.startsWith("/") ? path : "/" + path}`;

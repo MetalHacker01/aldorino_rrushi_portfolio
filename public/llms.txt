@@ -1,4 +1,6 @@
-# llms.txt — AI agent guidance for Aldorino Rrushi's portfolio
+# llms.txt — AI-agent guidance for Aldorino Rrushi's portfolio
+# https://aldorino.is-a.dev
+
 User-agent: *
 Allow: /v2/index.md
 Allow: /v2/index.txt
@@ -10,4 +12,5 @@ Allow: /v2/projects/maestro-builder/index.md
 Allow: /v2/projects/maestro-builder/index.txt
 
 # Preferred entry point for full content
-Canonical: /v2/index.md
+Canonical: https://aldorino.is-a.dev/v2/index.md
+Sitemap: https://aldorino.is-a.dev/sitemap.xml
