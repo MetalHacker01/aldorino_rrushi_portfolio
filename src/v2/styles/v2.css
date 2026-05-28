@@ -65,6 +65,17 @@
   .v2-root .show-sm-only { display: flex !important; }
 }
 
+/* Fade out the left/right edges of the mobile bottom-nav to signal there's
+   more content to scroll, and hide the native scrollbar (we manage state
+   via the active chip auto-scrolling into view). */
+.v2-root .v2-bottom-nav {
+  -webkit-mask-image: linear-gradient(to right, transparent 0, #000 16px, #000 calc(100% - 16px), transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0, #000 16px, #000 calc(100% - 16px), transparent 100%);
+}
+.v2-root .v2-bottom-nav::-webkit-scrollbar {
+  display: none;
+}
+
 /* Avatar treatment: soft amber phosphor glow on the frame, lightly desaturated
    image by default; hover/focus brings full colour and intensifies the glow. */
 .v2-root .v2-avatar-frame {

@@ -22,14 +22,30 @@ const Contact = () => (
     >
       {contact.map((c) => (
         <div key={c.command} style={{ display: "flex", gap: 12, alignItems: "baseline", padding: "6px 0" }}>
-          <span style={{ color: "var(--v2-signal-green)", minWidth: 12 }}>$</span>
-          <span style={{ color: "var(--v2-accent)", minWidth: 96 }}>{c.command}</span>
+          <span style={{ color: "var(--v2-signal-green)", minWidth: 12, flexShrink: 0 }}>$</span>
+          <span style={{ color: "var(--v2-accent)", minWidth: 96, flexShrink: 0 }}>{c.command}</span>
           {c.href === "#" ? (
-            <span style={{ color: "var(--v2-text)" }}>{c.value}</span>
+            <span
+              style={{
+                color: "var(--v2-text)",
+                minWidth: 0,
+                flex: 1,
+                overflowWrap: "anywhere",
+              }}
+            >
+              {c.value}
+            </span>
           ) : (
             <a
               href={c.href}
-              style={{ color: "var(--v2-text)", textDecoration: "underline", textDecorationColor: "var(--v2-text-dim)" }}
+              style={{
+                color: "var(--v2-text)",
+                textDecoration: "underline",
+                textDecorationColor: "var(--v2-text-dim)",
+                minWidth: 0,
+                flex: 1,
+                overflowWrap: "anywhere",
+              }}
             >
               {c.value}
             </a>
