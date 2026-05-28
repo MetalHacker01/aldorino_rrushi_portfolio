@@ -28,8 +28,8 @@ const App = () => (
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
-        <Analytics />
-        <SpeedInsights />
+        <Analytics mode="production" debug={false} />
+        <SpeedInsights debug={false} />
       </TooltipProvider>
     </QueryClientProvider>
   </HelmetProvider>
