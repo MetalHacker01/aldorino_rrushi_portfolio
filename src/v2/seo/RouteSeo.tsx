@@ -20,7 +20,7 @@ const RouteSeo = ({ title, description, path, ogType = "website", jsonLd }: Prop
       <link rel="canonical" href={canonical} />
 
       {/* Open Graph */}
-      <meta property="og:site_name" content={`${siteMeta.name} — Portfolio`} />
+      <meta property="og:site_name" content={`${siteMeta.name} · Portfolio`} />
       <meta property="og:type" content={ogType} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />

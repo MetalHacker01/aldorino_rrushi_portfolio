@@ -82,7 +82,7 @@ export const personSchema = () => ({
 export const websiteSchema = () => ({
   "@context": "https://schema.org",
   "@type": "WebSite",
-  name: `${siteMeta.name} — Portfolio`,
+  name: `${siteMeta.name} · Portfolio`,
   url: SITE_ORIGIN,
   inLanguage: "en",
   author: { "@id": `${SITE_ORIGIN}/#person` },

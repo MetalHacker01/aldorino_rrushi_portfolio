@@ -1,4 +1,4 @@
-/* v2 design tokens — scoped to .v2-root so they never leak into v1 */
+/* v2 design tokens, scoped to .v2-root so they never leak into v1 */
 .v2-root {
   /* Palette */
   --v2-bg-app: #0E0E10;
@@ -65,10 +65,28 @@
   .v2-root .show-sm-only { display: flex !important; }
 }
 
-/* Amber-duotone avatar treatment — defaults to warm tint, reveals true colour on hover */
-.v2-root .v2-avatar {
+/* Avatar treatment: soft amber phosphor glow on the frame, lightly desaturated
+   image by default; hover/focus brings full colour and intensifies the glow. */
+.v2-root .v2-avatar-frame {
   position: relative;
   display: inline-block;
+  width: 168px;
+  height: 168px;
+  border: 1px solid var(--v2-accent);
+  padding: 6px;
+  background: var(--v2-bg-surface);
+  box-shadow: 0 0 32px rgba(242, 166, 90, 0.15);
+  transition: box-shadow var(--v2-dur) var(--v2-ease);
+}
+.v2-root .v2-avatar-frame:hover,
+.v2-root .v2-avatar-frame:focus-within {
+  box-shadow: 0 0 44px rgba(242, 166, 90, 0.28);
+}
+.v2-root .v2-avatar {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
   overflow: hidden;
   background: var(--v2-bg-elevated);
 }
@@ -77,30 +95,16 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  filter: saturate(0.85) contrast(1.02);
   transition: filter var(--v2-dur) var(--v2-ease);
-  filter: grayscale(1) contrast(1.05) brightness(0.85);
 }
-.v2-root .v2-avatar::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: var(--v2-accent);
-  mix-blend-mode: multiply;
-  opacity: 0.65;
-  pointer-events: none;
-  transition: opacity var(--v2-dur) var(--v2-ease);
-}
-.v2-root .v2-avatar:hover img,
-.v2-root .v2-avatar:focus-visible img {
-  filter: none;
-}
-.v2-root .v2-avatar:hover::after,
-.v2-root .v2-avatar:focus-visible::after {
-  opacity: 0;
+.v2-root .v2-avatar-frame:hover .v2-avatar img,
+.v2-root .v2-avatar-frame:focus-within .v2-avatar img {
+  filter: saturate(1) contrast(1);
 }
 @media (prefers-reduced-motion: reduce) {
-  .v2-root .v2-avatar img,
-  .v2-root .v2-avatar::after {
+  .v2-root .v2-avatar-frame,
+  .v2-root .v2-avatar img {
     transition: none;
   }
 }

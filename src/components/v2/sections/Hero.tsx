@@ -37,22 +37,12 @@ const Hero = () => (
 
       <div style={{ flexShrink: 0 }}>
         <div
-          style={{
-            position: "relative",
-            width: 168,
-            height: 168,
-            border: "1px solid var(--v2-accent)",
-            padding: 6,
-            background: "var(--v2-bg-surface)",
-          }}
+          className="v2-avatar-frame"
+          tabIndex={0}
+          aria-label="Aldorino Rrushi portrait (hover or focus to reveal full colour)"
         >
-          <div
-            className="v2-avatar"
-            tabIndex={0}
-            aria-label="Aldorino Rrushi — portrait (hover or focus to reveal)"
-            style={{ width: "100%", height: "100%" }}
-          >
-            <img src="/images/profilePic.png" alt="Aldorino Rrushi — portrait" />
+          <div className="v2-avatar">
+            <img src="/images/profilePic.png" alt="Aldorino Rrushi portrait" />
           </div>
           <span
             className="mono dim"

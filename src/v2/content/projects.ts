@@ -7,10 +7,10 @@ export const projects: Project[] = [
     status: "shipped",
     signature: true,
     license: "MIT",
-    hook: "Side panel that injects into SFMC. Search everything, generate reports, deploy snippets — without leaving the platform.",
+    hook: "Side panel that injects into SFMC. Search everything, generate reports, deploy snippets, without leaving the platform.",
     stats: ["MV3 chrome+firefox", "cookie+csrf auth", "5 search sources", "6 reports"],
     bullets: [
-      "Universal search across Data Extensions, Automations, Journeys, Assets, Activities — results stream in progressively as each source responds",
+      "Universal search across Data Extensions, Automations, Journeys, Assets, Activities. Results stream in progressively as each source responds",
       "Browse automations and journeys with rich status pills, inline detail cards, and one-click open in Automation Studio or Journey Builder",
       "Save reusable AMPscript / SSJS / SQL snippets and deploy them directly into open SFMC Ace editors",
     ],
@@ -22,7 +22,7 @@ export const projects: Project[] = [
     name: "CloudPage Maestro",
     status: "shipped",
     license: "MIT",
-    hook: "Batch operations for SFMC CloudPages. Publish, unpublish, move, search, sort, export — at the speed of the bulk endpoint, not the UI.",
+    hook: "Batch operations for SFMC CloudPages. Publish, unpublish, move, search, sort, export, at the speed of the bulk endpoint instead of the UI.",
     stats: ["MV3", "cookie-only auth", "bulk V2 endpoint", "ZIP export with folder tree"],
     bullets: [
       "Bulk publish / unpublish / move across landing pages and code resources, with the full SFMC category tree as the folder picker",
@@ -40,7 +40,7 @@ export const projects: Project[] = [
     hook: "Drag-and-drop visual builder for bulletproof responsive HTML emails. Outlook 2007 onward, dark-mode-aware, real Mailjet test sends.",
     stats: ["next.js 16", "30 modules", "mjml", "vml bulletproof", "zustand"],
     bullets: [
-      "Live preview canvas — click any module in the rendered email to select it; the right panel re-renders with that module's typed properties",
+      "Live preview canvas. Click any module in the rendered email to select it, and the right panel re-renders with that module's typed properties",
       "Bulletproof Outlook via <v:roundrect> buttons and <v:image> + <v:rect> overlay-on-photo hero pattern, all derived from Litmus + Email-on-Acid references",
       "Send a test in two clicks via Mailjet, with friendly error guidance for the validation-hold and sender-not-verified states",
     ],

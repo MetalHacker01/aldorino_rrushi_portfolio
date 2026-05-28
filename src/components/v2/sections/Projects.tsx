@@ -19,7 +19,7 @@ const Projects = () => (
         color: "var(--v2-text-muted)",
       }}
     >
-      Open-source tools I've built — every one of them was born from a real client engagement where SFMC's UI or limits got in the way. All MIT-licensed. All used in production.
+      Open-source tools I've built. Every one of them was born from a real client engagement where SFMC's UI or limits got in the way. All MIT-licensed. All used in production.
     </p>
 
     <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>

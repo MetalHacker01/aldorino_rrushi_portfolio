@@ -12,8 +12,8 @@ import { personSchema, websiteSchema } from "@/v2/seo/personSchema";
 const Home = () => (
   <>
     <RouteSeo
-      title="Aldorino Rrushi — Solution Engineer · Marketing Automation · Software · AI"
-      description="Salesforce Marketing Cloud solution engineer at MarketOne International. 7+ years across enterprise marketing automation programs (SFMC, Eloqua, Marketo, Responsys, Unica). Open-source tools: SFMC Scout, CloudPage Maestro, Maestro Builder. Tirana, Albania — remote, global."
+      title="Aldorino Rrushi · Marketing Automation Solution Engineer"
+      description="Salesforce Marketing Cloud solution engineer at MarketOne International. 7+ years across enterprise marketing automation programs (SFMC, Eloqua, Marketo, Responsys, Unica). Open-source tools: SFMC Scout, CloudPage Maestro, Maestro Builder. Tirana, Albania. Remote, global."
       path="/"
       ogType="profile"
       jsonLd={[personSchema(), websiteSchema()]}

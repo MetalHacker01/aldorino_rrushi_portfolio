@@ -4,7 +4,7 @@ export const SITE_ORIGIN = "https://aldorino.is-a.dev";
 
 export const siteMeta: SiteMeta = {
   name: "Aldorino Rrushi",
-  role: "Solution Engineer — Marketing Automation · Software · AI",
+  role: "Solution Engineer · Marketing Automation · Software · AI",
   taglineHero: "I make marketing platforms do what they couldn't.",
   location: "Tirana, Albania",
   email: "aldorino.rrushi@gmail.com",

@@ -23,7 +23,7 @@ export const experience: Role[] = [
     period: "2022 → 2024-10",
     location: "Remote",
     summary:
-      "Led complex SFMC campaigns end-to-end — strategy, design, implementation, and reporting. Heavy AMPscript / SSJS, SQL segmentation, and custom web tooling for marketing automation.",
+      "Led complex SFMC campaigns end-to-end (strategy, design, implementation, and reporting). Heavy AMPscript / SSJS, SQL segmentation, and custom web tooling for marketing automation.",
     achievements: [
       "Developed customised SFMC solutions including data integrations and automation workflows",
       "Utilised AMPscript and SSJS extensively in daily development to solve client issues and optimise campaign performance",
@@ -47,7 +47,7 @@ export const experience: Role[] = [
       "Extensive hands-on expertise across SFMC, Oracle Eloqua, Oracle Responsys, and HCL Unica",
       "Developed highly personalised and responsive emails and landing pages",
       "Designed and configured complex digital campaigns and customer journeys",
-      "Analysed campaign performance — segmentation, deliverability, open / click / conversion — and produced regular reporting",
+      "Analysed campaign performance (segmentation, deliverability, open / click / conversion) and produced regular reporting",
     ],
     technologies: ["Salesforce Marketing Cloud", "Oracle Eloqua", "Oracle Responsys", "HCL Unica", "Email Marketing", "Team Leadership"],
   },
@@ -60,7 +60,7 @@ export const experience: Role[] = [
       "Authored and adapted web content across EMEA languages for FCA Group's major brands using Adobe Experience Manager.",
     achievements: [
       "Created and adapted web pages for EMEA-region languages",
-      "Worked with Adobe Experience Manager on FCA Group brands — Fiat, Alfa Romeo, Jeep, Lancia, Abarth, Fiat Professional",
+      "Worked with Adobe Experience Manager on FCA Group brands (Fiat, Alfa Romeo, Jeep, Lancia, Abarth, Fiat Professional)",
       "Adjusted page layout and style elements to meet brand criteria",
     ],
     technologies: ["Adobe Experience Manager", "HTML", "CSS", "EMEA Localisation"],

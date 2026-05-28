@@ -15,7 +15,7 @@ const today = () => {
 
 const buildMarkdown = (): string => {
   const lines: string[] = [];
-  lines.push(`# ${siteMeta.name} — Solution Engineer`);
+  lines.push(`# ${siteMeta.name}, Marketing Automation Solution Engineer`);
   lines.push("");
   lines.push(`> ${siteMeta.taglineHero}`);
   lines.push("");
@@ -39,7 +39,7 @@ const buildMarkdown = (): string => {
   lines.push("## Experience");
   lines.push("");
   experience.forEach((r) => {
-    lines.push(`### ${r.title} — ${r.company} (${r.period})`);
+    lines.push(`### ${r.title} · ${r.company} (${r.period})`);
     lines.push(`*${r.location}*`);
     lines.push("");
     lines.push(r.summary);
@@ -52,7 +52,7 @@ const buildMarkdown = (): string => {
 
   lines.push("## Projects");
   lines.push("");
-  lines.push("Open-source tools I've built — every one of them was born from a real client engagement where SFMC's UI or limits got in the way. All MIT-licensed. All used in production.");
+  lines.push("Open-source tools I've built. Every one of them was born from a real client engagement where SFMC's UI or limits got in the way. All MIT-licensed. All used in production.");
   lines.push("");
   projects.forEach((p) => {
     const tags = [
@@ -60,7 +60,7 @@ const buildMarkdown = (): string => {
       p.status === "in-development" ? "in development" : "shipped",
       p.license,
     ].filter(Boolean).join(" · ");
-    lines.push(`### ${p.name} — \`${p.slug}\``);
+    lines.push(`### ${p.name} · \`${p.slug}\``);
     lines.push(`*${tags}*`);
     lines.push("");
     lines.push(p.hook);
@@ -174,7 +174,7 @@ export const writeBuildArtifacts = (outDir: string) => {
     const dir = path.join(outDir, "v2", "projects", p.slug);
     fs.mkdirSync(dir, { recursive: true });
     const projectMd = [
-      `# ${p.name} — ${p.slug}`,
+      `# ${p.name} · ${p.slug}`,
       "",
       `> ${p.hook}`,
       "",

@@ -12,7 +12,7 @@ const CloudPageMaestro = () => (
       SFMC CloudPages does most things one at a time. Publish a single page. Move a single page. Download a single asset. On a real client engagement with hundreds of landing pages spread across dozens of campaigns, "one at a time" is the difference between a 20-minute task and a half-day.
     </p>
     <p style={{ fontFamily: "var(--v2-font-sans)", fontSize: "1rem", lineHeight: 1.65, marginBottom: 32 }}>
-      CloudPage Maestro adds batch operations to CloudPages — publish, unpublish, move, search, sort, export — all at the speed of SFMC's bulk V2 endpoint instead of the click-once-wait-three-seconds UI.
+      CloudPage Maestro adds batch operations to CloudPages (publish, unpublish, move, search, sort, export) at the speed of SFMC's bulk V2 endpoint instead of the click-once-wait-three-seconds UI.
     </p>
 
     <h2 className="mono accent" style={{ fontSize: "1.25rem", marginBottom: 12 }}>## what it does</h2>
@@ -21,8 +21,8 @@ const CloudPageMaestro = () => (
         "Bulk publish / unpublish / move for landing pages and code resources",
         "Folder picker with the full SFMC category tree",
         "Search across name, content, description, folder; filter by asset type",
-        "Export All to CSV — every asset enriched with status, URL, last-modified, folder breadcrumb",
-        "Download All as ZIP — landing page HTML + code resources, folder tree preserved",
+        "Export All to CSV (every asset enriched with status, URL, last-modified, folder breadcrumb)",
+        "Download All as ZIP, with landing page HTML and code resources, folder tree preserved",
         "Single-asset download icon on every row",
         "Real-time token status badges with auto-recovery on 401",
         "Hover any published URL to see a live iframe preview",
@@ -56,7 +56,7 @@ const CloudPageMaestro = () => (
 
     <h2 className="mono accent" style={{ fontSize: "1.25rem", marginBottom: 12 }}>## what i learned</h2>
     <p style={{ fontFamily: "var(--v2-font-sans)", fontSize: "1rem", lineHeight: 1.65, marginBottom: 16 }}>
-      The biggest perf win came from killing the "ghost tab" pattern I started with — opening a hidden SFMC tab to capture CSRF tokens. Cookie-only reads are dramatically faster on panel open, no 15-second wait, no flicker. I only need CSRF when actually writing.
+      The biggest perf win came from killing the "ghost tab" pattern I started with (opening a hidden SFMC tab to capture CSRF tokens). Cookie-only reads are dramatically faster on panel open, no 15-second wait, no flicker. I only need CSRF when actually writing.
     </p>
     <p style={{ fontFamily: "var(--v2-font-sans)", fontSize: "1rem", lineHeight: 1.65, marginBottom: 32 }}>
       The ZIP export was the feature I underestimated. Once you can export the whole landing page tree to disk, the panel becomes a real backup tool, not just a batch operations toy. Clients ask for "all our landing pages" surprisingly often.

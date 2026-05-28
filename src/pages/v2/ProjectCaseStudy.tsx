@@ -27,7 +27,7 @@ const ProjectCaseStudy = () => {
   return (
     <>
       <RouteSeo
-        title={`${project.name} — case study · ${siteMeta.name}`}
+        title={`${project.name} case study · ${siteMeta.name}`}
         description={project.hook}
         path={`/projects/${project.slug}`}
         ogType="article"

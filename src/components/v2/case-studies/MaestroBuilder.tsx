@@ -31,7 +31,7 @@ const MaestroBuilder = () => (
     <h2 className="mono accent" style={{ fontSize: "1.25rem", marginBottom: 12 }}>## what it does</h2>
     <ul style={{ listStyle: "none", padding: 0, marginBottom: 32 }}>
       {[
-        "30 production-ready modules — preheaders, logos, heroes with VML overlays, three-column features, product cards, app-store badges, footers",
+        "30 production-ready modules (preheaders, logos, heroes with VML overlays, three-column features, product cards, app-store badges, footers)",
         "Live preview canvas with click-to-select bridging to the property panel",
         "Bulletproof Outlook via <v:roundrect> and <v:image>+<v:rect> overlay patterns",
         "Opt-in dark mode with per-instance HSL transforms and [data-ogsc]/[data-ogsb] Outlook.com mirrors",
@@ -72,7 +72,7 @@ const MaestroBuilder = () => (
 
     <h2 className="mono accent" style={{ fontSize: "1.25rem", marginBottom: 12 }}>## what i learned</h2>
     <p style={{ fontFamily: "var(--v2-font-sans)", fontSize: "1rem", lineHeight: 1.65, marginBottom: 16 }}>
-      The Outlook hero overlay (&lt;v:image&gt;+&lt;v:rect&gt;) does not nest a &lt;v:roundrect&gt; child cleanly. Three days of debugging to find out that the overlay button has to be a flat-table button on Outlook, square corners and all. The README ships with that limitation documented honestly — pretending it's solved would burn the next person.
+      The Outlook hero overlay (&lt;v:image&gt;+&lt;v:rect&gt;) does not nest a &lt;v:roundrect&gt; child cleanly. Three days of debugging to find out that the overlay button has to be a flat-table button on Outlook, square corners and all. The README ships with that limitation documented honestly, because pretending it's solved would burn the next person.
     </p>
     <p style={{ fontFamily: "var(--v2-font-sans)", fontSize: "1rem", lineHeight: 1.65, marginBottom: 16 }}>
       Mailjet's error codes (mj-XXXX) are unhelpful at runtime. Wrapping them with humanizeMailjetError() and surfacing actionable guidance ("verify this sender first", "your account is on validation hold") turned the send-test dialog from a black box into a useful tool.

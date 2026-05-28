@@ -1,4 +1,4 @@
-# llms.txt — AI-agent guidance for Aldorino Rrushi's portfolio
+# llms.txt (AI-agent guidance for Aldorino Rrushi's portfolio)
 # https://aldorino.is-a.dev
 
 User-agent: *
