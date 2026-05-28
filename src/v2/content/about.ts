@@ -2,10 +2,10 @@ import type { AboutContent } from "./types";
 
 export const about: AboutContent = {
   paragraphs: [
-    "I'm a solution engineer at MarketOne International, working across Salesforce Marketing Cloud, Oracle Eloqua, Adobe Marketo, Oracle Responsys, and HCL Unica. Seven-plus years across enterprise programs — Mopar FCA, Luxottica, Maserati and others. Tirana-based, remote-global.",
-    "Master's degree in Informatics Engineering from the Polytechnic University of Tirana, on top of a B.Sc. in Computer Science from the University of Vlora \"Ismail Qemali\". Comfortable on Linux (Debian, Arch, openSUSE), strong on hardware / network / security fundamentals — which matters once you start running local AI models on real iron.",
-    "Most MarTech consultants stop where the platform stops. I ship software when the platform stops — so the engagement actually delivers what was promised, not what was technically possible inside the UI. The open-source tools further down this page are the proof.",
-    "Where I'm heading: agentic MarTech. Agentforce, AI-driven journeys, predictive sends. Already Salesforce-certified for Agentforce and AI Associate. Treating it as the next eighteen months of the craft.",
+    "I'm a solution engineer at MarketOne International, focused on Salesforce Marketing Cloud. Most of my work is with enterprise clients, designing and shipping marketing automation programs that actually run, from the strategy conversation through to the AMPscript, SSJS and SQL that makes a campaign behave the way the brief asked for. I also work across Oracle Eloqua, Adobe Marketo, Oracle Responsys and HCL Unica when a program calls for it.",
+    "Seven plus years in the space. Before MarketOne I was technical lead of a marketing automation team of 10 to 15 people at Assist Digital, on long-running programs for Mopar FCA, Luxottica and Maserati. M.Sc. in Informatics Engineering from the Polytechnic University of Tirana, on top of a B.Sc. in Computer Science from the University of Vlora 'Ismail Qemali'. Tirana-based, remote-global.",
+    "I'm also comfortable writing code, which helps when a platform's UI stops short of what a campaign needs. Linux (Debian, Arch, openSUSE) day to day, decent on the basics of networking and security.",
+    "The aim is to grow into an architect role in SFMC, or marketing automation platforms more broadly. The next few years are about going deeper on the platform side and keeping the development skills sharp.",
   ],
   languages: [
     { name: "Albanian", level: "native" },

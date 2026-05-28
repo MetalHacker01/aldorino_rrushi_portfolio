@@ -2,18 +2,17 @@ import type { AIContent } from "./types";
 
 export const ai: AIContent = {
   paragraphs: [
-    "Marketing automation platforms are getting AI primitives baked in. Agentforce on Salesforce. Predictive sends. AI-driven journey decisioning. The platforms that win the next five years are the ones that turn those primitives into measurable program outcomes — and that's the work I'm leaning into.",
-    "Beyond the cloud-MAP work, I run local AI on real hardware. Ollama, llama.cpp, GGUF quantizations, LoRA fine-tunes — picking the right model size and quant for the silicon I'm targeting and then making it useful. CPU-only laptop inference, single-GPU workstation, prosumer rigs with mixed VRAM. The MarTech relevance is direct: production AI workflows live or die on inference cost, latency, and how well a model can be steered toward a narrow domain.",
-    "I'm not an AI researcher. I'm a MarTech engineer with deep Linux + hardware roots who treats agentic systems as the next evolution of the work I already do — orchestrating customer experience across channels, now with models in the loop.",
+    "AI is becoming a real part of marketing automation platforms. Salesforce shipped Agentforce, predictive sends and AI scoring are common, automated content variants are starting to land. I'm working through what these primitives can actually do on a client program versus what they look good doing in a demo.",
+    "On the side, I run local LLMs on my own hardware (Ollama, llama.cpp). Mostly to learn the tooling: how quantization affects quality, what runs well on a consumer GPU, and what's actually possible with small fine-tunes when you don't have a data centre behind you.",
+    "I'm not pretending to be an AI researcher. I'm a marketing automation engineer paying attention, because agentic systems are going to change what a 'campaign' looks like within a few years and I'd rather be ready than catch up.",
   ],
   certs: ["Salesforce Certified Agentforce Specialist", "Salesforce Certified AI Associate"],
   currentlyExploring: [
     "agentforce on real customer journeys",
-    "claude code as a daily driver for SFMC dev work",
-    "genai-assisted ampscript / ssjs authoring",
-    "running local llms (ollama, llama.cpp) on consumer + workstation hardware",
-    "fine-tuning small models for narrow martech tasks — copy variants, segmentation hints, qa",
-    "gpu / vram trade-offs and quantization (q4_k_m, q5_k_m, q6_k) for inference perf",
+    "claude code as a daily driver for sfmc dev work",
+    "genai-assisted ampscript and ssjs authoring",
+    "running local llms (ollama, llama.cpp) on consumer hardware",
+    "small fine-tunes on consumer gpus to learn the quantization stack",
   ],
-  closingLine: "Enthusiast learning fast — not an 'AI expert'. The honesty matters.",
+  closingLine: "Learning fast, not claiming the expert badge. The honesty matters.",
 };
