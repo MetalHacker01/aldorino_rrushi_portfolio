@@ -29,7 +29,7 @@ const App = () => (
           </Routes>
         </BrowserRouter>
         <Analytics mode="production" debug={false} />
-        <SpeedInsights debug={false} />
+        <SpeedInsights debug={false} sampleRate={1} />
       </TooltipProvider>
     </QueryClientProvider>
   </HelmetProvider>
